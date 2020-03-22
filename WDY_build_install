@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set +e
+
+cd xar
+
+./autogen.sh CFLAGS="-I/usr/include/openssl-1.0" LDFLAGS="-L/usr/lib/openssl-1.0"
+make -j8
+sudo make install
+
+
